@@ -1,0 +1,227 @@
+
+    html {
+      font-size: 2vw;
+      color: #333333;
+    }
+    body {
+      margin: 0;
+    }
+
+    .main_graph {
+      text-align: center;
+    }
+
+    /* 周数 */
+    #days{
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      text-align: center;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color:#f3d986;
+      margin: 1% 10% 0 10%;
+    }
+    #days button {
+      border: 0;
+      margin: 0 0 0 0;
+      font-size: 2rem;
+      background: none;
+      color: #333333;
+      font-size: 1.5rem;
+    }
+    #days span {
+      font-size: 0.1rem;
+      text-align: center;
+      background: none;
+    }
+
+    #birth{
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color:#ffe761;
+      margin: 1% 10% 0 10%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    #birth p {
+      border: 0;
+      font-size: 1.5rem;
+      background: none;
+      color: #333333;
+      grid-column: 1/span 2;
+    }
+    #birth button {
+      border: 0;
+      margin: 0 0 0 0;
+      background: none;
+      text-align: center;
+    }
+    #birth span {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 0 10% 10% 10%;
+      
+    }
+    .gradient-text {
+      font-size: 0.8rem;
+      animation: rainbowGlow 1s infinite linear alternate, metalReflection 1s linear infinite;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    @keyframes rainbowGlow {
+      0%,100% { background-image: linear-gradient(45deg, #e1afcc, #7530e3); background-clip: text; color: transparent; }
+      12.5% { background-image: linear-gradient(45deg, #e1afcc, #7530e3); background-clip: text; color: transparent; }
+      25% { background-image: linear-gradient(45deg, #7530e3, #30e3b7); background-clip: text; color: transparent; }
+      37.5% { background-image: linear-gradient(45deg, #30e3b7, #30e3e3); background-clip: text; color: transparent; }
+      50% { background-image: linear-gradient(45deg, #30e3e3, #307fe3); background-clip: text; color: transparent; }
+      62.5% { background-image: linear-gradient(45deg, #307fe3, #7f30e3); background-clip: text; color: transparent; }
+      75% { background-image: linear-gradient(45deg, #7f30e3, #e330e3); background-clip: text; color: transparent; }
+      87.5% { background-image: linear-gradient(45deg, #e330e3, #e3307f); background-clip: text; color: transparent; }
+    }
+    
+    @keyframes metalReflection {
+      0%, 100% {
+        text-shadow: none;
+      }
+      50% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    /* 交互 */
+    #interaction {
+      /*圆角*/
+      border-radius: 10px;
+      border: 2px solid #333333;
+      margin: 1% 10% 0 10%;
+      padding: 1%;
+      background: #b5bfcc;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+    #title {
+      font-size: 2rem;
+      line-height: 2rem;
+      text-align: center;
+      background: #b5bfcc;
+      grid-row: 1;
+      grid-column: 1/span 2;
+    }
+    #title button {
+      border: 0;
+      padding: 1% 0 1% 0;
+      margin: 0;
+      font-size: 3rem;
+      background: #b5bfcc;
+      color: #333333;
+    }
+    /* img居中 */
+    #wooden_fish {
+      border: 0;
+      background:none;
+      text-align: center;
+      grid-column: 1/span 2;
+      grid-row: 2;
+    }
+    #wooden_fish button {
+      border: 0;
+      background:none;
+      text-align: center;
+    }
+    #wooden_fish p{
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin: 3% 0 0 0;
+      text-align: center;
+      background: none;
+    }
+    /* 音符 */
+    #sound_lyrics {
+      grid-column: 2;
+      grid-row: 1;
+      border:0;
+      margin: 20% 0 0 0;
+      padding: 0;
+      background: none;
+      display: none;
+    } 
+    #sound_lyrics button {
+      grid-column: 2;
+      grid-row: 1;
+      border-radius: 50%;
+      border: 2px solid #333333;
+      height: 50px;
+      width:54px;
+      padding: 0;
+      background: none;
+      position: absolute;
+    }
+    .slash {
+      grid-column: 2;
+      grid-row: 1;
+      width: 100%;
+      height: 5%;
+      position: absolute;
+      display: block;
+      background-color: black; 
+      z-index: 2;
+      transform: rotate(45deg) translate(-30%, -600%);; 
+    }
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    #sound img {
+      width:40%;
+      background: none;
+      animation: rotation 6s infinite paused linear;
+    }
+    @keyframes lyrics_emerge {
+      0% {
+        opacity: 0;
+        /*UP*/
+        transform: translate(0, 0);
+      }
+      30% {
+        opacity: 1;
+        /*UP*/
+        transform: translate(0, 20%);
+      }
+      60% {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(0, -20%);
+      }
+    }
+    #lyrics {
+      border:0;
+      margin: 0;
+      padding: 0;
+      background: none;
+      animation: lyrics_emerge 1s infinite paused linear;
+      position: absolute;
+      text-align: center;
+      left: 65%;
+    }
+
+    /* 更新日志 */
+    #temp {
+      margin: 0;
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+    
