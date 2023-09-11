@@ -1,0 +1,117 @@
+<html>
+
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="data:image/ico;base64,aWNv" />
+    <!-- 调用css文件 -->
+    <link rel="stylesheet" href=".\homepage.css" />
+  </head>
+
+  <body>
+    <!-- 主页图片（以后会拆分为一个个图） -->
+    <div class="main_graph">
+      <img src=".\班级主页.png" alt="啊呀呀，图没加载出来呢" width="80%" />
+    </div>
+    <!-- <div style="text-align: center" id="main_graph"><img src="/WEB_Files/uploadfile/202208/20220831130001988.png" alt="啊呀呀，图没加载出来呢" width="80%"></div> -->
+
+    <!-- 显示距离高考的天数 -->
+    <div id="days">
+      <p>
+        现距首考（去年日期）周数（向下取整）：
+      </p>
+      <button onclick="ShowDays()">
+        你自己难道没点概念吗
+      </button>
+      <span><br>（才，才不是连Date对象都不会用呢）</span>
+    </div>
+
+    <!-- 生日祝福 -->
+    <div id="birth">
+      <p>
+        这两周过生日的人：
+      </p>
+        <span id="birthName">
+          没有人<br>
+        </span>
+      <span id="birthDate">
+        过生日<br>
+      </span>
+    </div>
+
+    <!-- 交互部分 -->
+    <div id="interaction">
+
+      <!-- 起始按钮 -->
+      <div id="title">
+        <button id="hhxx">
+        </button>
+      </div>
+        
+      <!-- 音符及歌词 -->
+      <div id="sound_lyrics">
+        <!-- 音符 -->
+        <button id="sound">
+          <img
+            src=".\音符.png"
+            alt="啊呀呀，图没加载出来呢"
+          /> 
+          <!-- <img src="/WEB_Files/uploadfile/202308/20230816205048944.png" alt="啊呀呀，图没加载出来呢"> -->
+          <!-- 斜线 -->
+          <span class="slash"></span>
+        </button>
+        <!-- 歌词 -->
+        <div id="lyrics"></div>
+      </div>
+      
+      <!-- 木鱼 -->
+      <div id="wooden_fish" style="display: none;">
+        <button onclick="MADP()" id="sakaban">
+          <br>
+          <img
+            src=".\萨卡班木鱼5.png"
+            alt="啊呀呀，图没加载出来呢"
+          />
+          <!-- <img src="/WEB_Files/uploadfile/202308/20230816204908855.png" alt="啊呀呀，图没加载出来呢"> -->
+        </button>
+        <!-- 提示语 -->
+        <p>
+          没干劲了可以敲敲这只萨卡班木鱼
+          <br>
+          May all the beauty be blessed
+        </p>
+      </div> 
+    </div>
+
+    <!-- 更新日志 -->
+    <div id="temp">
+      今天先休息了
+      <br>
+      碎碎念：「好好学习」，有什么好想法Q我
+      <br>
+      本次更新新增：
+      <br>
+      1.修复了部分已知bug(如字体过大)
+      <br>
+      2.增加了生日提醒以及土味炫彩效果
+      <br>
+      3.新增了许多或已知或未知的bug(斜线&歌词)
+      <br>
+      4.发现可以直接加事件触发器而不需要用按钮的破防但懒得改的开发者
+    </div>
+
+    <!-- 调用js文件 -->
+<script src=".\homepage.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
